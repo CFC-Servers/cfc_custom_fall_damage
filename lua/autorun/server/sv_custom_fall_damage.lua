@@ -1,4 +1,4 @@
-local SPEED_MULTIPLIER = 0.15
+local SPEED_MULTIPLIER = 0.175
 local SPEED_OFFSET = 141.75
 
 --[[Default Values 
