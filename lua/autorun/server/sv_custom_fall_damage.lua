@@ -1,17 +1,22 @@
-local SPEED_MULTIPLIER = 0.2418
+local SPEED_MULTIPLIER = 0.1.5
 local SPEED_OFFSET = 141.75
 
+--[[Default Values 
+Mult: 0.2418 
+offset: 141.75
+--]]
+
 local function calculateDamage( ply, speed )
-	local damage = ( SPEED_MULTIPLIER * speed ) - SPEED_OFFSET
-	damage = math.max( 0, math.ceil( damage ) )
-	
-	return damage
+    local damage = ( SPEED_MULTIPLIER * speed ) - SPEED_OFFSET
+    damage = math.max( 0, math.ceil( damage ) )
+    
+    return damage
 end
 
 local function getFallDamage( ply, speed )
-	local damage = calculateDamage( ply, speed )
-	
-	return damage
+    local damage = calculateDamage( ply, speed )
+    
+    return damage
 end
 
 -- Bastards arbitrarily returning "10" before we can get to it
