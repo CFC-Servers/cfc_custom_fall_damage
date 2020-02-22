@@ -15,7 +15,6 @@ local function getFallDamage( ply, speed )
     -- Based on CS:S fall damage algorithm
     local damage = ( SPEED_MULTIPLIER * speed ) - SPEED_OFFSET
     damage = math.max( 0, math.ceil( damage ) )
-    
     return damage
 end
 
