@@ -25,7 +25,6 @@ hook.Add( "GetFallDamage", "CFC_FallDamage", getFallDamage )
 local function onPlayerDeath( ply, attacker, dmg )
     if not dmg:IsFallDamage() then return end
     if not IsValid( ply ) and ply:IsPlayer() then return end
-    
     ply:ChatPrint( DEATH_MESSAGE )
 end
 
