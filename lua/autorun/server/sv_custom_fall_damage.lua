@@ -15,12 +15,12 @@ local function getFallDamage( ply, speed )
     -- Based on CS:S fall damage algorithm
     local damage = ( SPEED_MULTIPLIER * speed ) - SPEED_OFFSET
     damage = math.max( 0, math.ceil( damage ) )
+
     return damage
 end
 
 hook.Remove( "GetFallDamage", "CFC_FallDamage" )
 hook.Add( "GetFallDamage", "CFC_FallDamage", getFallDamage )
-
 
 local function onPlayerDeath( ply, attacker, dmg )
     if not dmg:IsFallDamage() then return end
